@@ -29,6 +29,7 @@ public class EscMenuHandler : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
+            if (Time.timeScale > 0) Time.timeScale = 0; else Time.timeScale = 1;
             EscapeMenu.SetActive(!EscapeMenu.activeSelf);
         }
     }
