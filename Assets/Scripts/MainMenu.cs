@@ -20,16 +20,13 @@ public class MainMenu : MonoBehaviour
     public GameObject LevelSelectSubmenu;
     public GameObject SettingsSubmenu;
 
-    // public void PlayButton()
-    // {
-    //     SceneManager.LoadScene("LevelOne");
-    // }
-
+    // Makes sure the menu is properly set each time its loaded.
     void Start()
     {
         ResetMenu();
     }
 
+    // Unloads the Level Select and Settings submenu UIs, and loads the main title.
     public void ResetMenu()
     {
         LevelSelectSubmenu.SetActive(false);
@@ -37,10 +34,9 @@ public class MainMenu : MonoBehaviour
         Title.SetActive(true);
     }
 
+    // Loads Level Select sub menu.
     public void LevelSelectButton()
     {
-        Debug.Log("Level Selection button pressed.");
-
         Title.SetActive(false);
         LevelSelectSubmenu.SetActive(true);
     }
@@ -62,9 +58,12 @@ public class MainMenu : MonoBehaviour
     
     public void SettingsButton()
     {
-        Debug.Log("Settings button pressed.");
-
         Title.SetActive(false);
         SettingsSubmenu.SetActive(true);
+    }
+
+    public void QuitToDesktop()
+    {
+        Application.Quit();
     }
 }
