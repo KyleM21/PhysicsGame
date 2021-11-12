@@ -17,6 +17,7 @@ using UnityEngine.SceneManagement;
 public class EscMenuHandler : MonoBehaviour
 {
     public GameObject EscapeMenu;
+    public GameObject PlayButtonUI;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class EscMenuHandler : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
-            if (Time.timeScale > 0) Time.timeScale = 0; else Time.timeScale = 1;
+            if (Time.timeScale > 0) Time.timeScale = 0; else if (!PlayButtonUI.activeSelf) Time.timeScale = 1;
             EscapeMenu.SetActive(!EscapeMenu.activeSelf);
         }
     }
@@ -47,5 +48,10 @@ public class EscMenuHandler : MonoBehaviour
     public void QuitToDesktop()
     {
         Application.Quit();
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

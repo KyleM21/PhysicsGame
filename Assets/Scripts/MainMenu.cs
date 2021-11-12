@@ -32,6 +32,7 @@ public class MainMenu : MonoBehaviour
         LevelSelectSubmenu.SetActive(false);
         SettingsSubmenu.SetActive(false);
         Title.SetActive(true);
+        Time.timeScale = 1;
     }
 
     // Loads Level Select sub menu.
