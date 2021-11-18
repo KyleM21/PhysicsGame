@@ -1750,6 +1750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1243975398}
   - component: {fileID: 1243975397}
+  - component: {fileID: 1243975399}
   m_Layer: 0
   m_Name: Universe
   m_TagString: Untagged
@@ -1784,6 +1785,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1243975399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243975396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5ee8626c93be541948ea47e739c569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayButtonUI: {fileID: 1500069561}
 --- !u!1 &1274957895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2263,7 +2277,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1243975399}
         m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
         m_MethodName: RunSimButton
         m_Mode: 1
