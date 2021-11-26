@@ -7,8 +7,8 @@
 */
 
 .navbar-default {
-background: rgb(181,39,39);
-background: linear-gradient(90deg, rgba(181,39,39,1) 0%, rgba(179,24,24,1) 35%, rgba(0,232,255,1) 100%);
+background: rgb(75,16,16);
+background: linear-gradient(90deg, rgba(75,16,16,1) 0%, rgba(52,11,11,1) 35%, rgba(0,152,167,1) 100%);
     border-color: #FFFFFF;
     border-radius: 0;
     margin-bottom: 0;
