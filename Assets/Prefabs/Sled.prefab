@@ -860,6 +860,7 @@ GameObject:
   - component: {fileID: 8037835806337716795}
   - component: {fileID: 1970712047501403791}
   - component: {fileID: 3196590436278423803}
+  - component: {fileID: 1275508461739605409}
   m_Layer: 0
   m_Name: Sled
   m_TagString: Untagged
@@ -876,7 +877,7 @@ Transform:
   m_GameObject: {fileID: 3854980282092017681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.947028, y: 1.1902059, z: -2.4722042}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 1533120757092227245}
   - {fileID: 1178673217659665802}
@@ -912,11 +913,34 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7ecb31cfe0bf88e43b73ada58883ee1a, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &1275508461739605409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854980282092017681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1afdaaa54f420b84991867d19af28dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ControlledObject: {fileID: 3854980282092017681}
+  Ice_sleds_Enabled: 0
+  Ice_sleds_Object: {fileID: 3545363171619773868}
+  Jet_Enabled: 0
+  Jet_Object: {fileID: 2427797676049129498}
+  boost_force: 10
+  Helicopter_Enabled: 0
+  Helicopter_Object: {fileID: 7227485916873550178}
+  lift_strength: 0.1
+  roll_strength: 0.1
+  starting_fuel: 100
 --- !u!1 &4701815181981463077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,7 +1032,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1178673217659665802}
-  - component: {fileID: 7272161850717179243}
   m_Layer: 0
   m_Name: Attachments
   m_TagString: Untagged
@@ -1033,23 +1056,6 @@ Transform:
   m_Father: {fileID: 8037835806337716795}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7272161850717179243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5863251068601322368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1afdaaa54f420b84991867d19af28dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ControlledObject: {fileID: 0}
-  Ice_sleds_Enabled: 0
-  Jet_Enabled: 0
-  Helicopter_Enabled: 0
-  current_fuel: 100
 --- !u!1 &6213395212104157237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,6 +1148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8576987360501088718}
   - component: {fileID: 1778955426602352096}
+  - component: {fileID: 8379797410327674417}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -1157,8 +1164,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6467187696758496068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.4722042}
-  m_LocalScale: {x: 4.2793374, y: 0.04998201, z: 1}
+  m_LocalPosition: {x: 0, y: -0.0081, z: 2.4722042}
+  m_LocalScale: {x: 4.2793374, y: 0.06624116, z: 1}
   m_Children: []
   m_Father: {fileID: 6191560723519923587}
   m_RootOrder: 0
@@ -1214,6 +1221,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8379797410327674417
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6467187696758496068}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &7227485916873550178
 GameObject:
   m_ObjectHideFlags: 0
