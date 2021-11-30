@@ -30,13 +30,15 @@ public class EscMenuHandler : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
-            if (Time.timeScale > 0) Time.timeScale = 0; else if (!PlayButtonUI.activeSelf) Time.timeScale = 1;
+            // if (Time.timeScale > 0) Time.timeScale = 0; else if (!PlayButtonUI.activeSelf) Time.timeScale = 1;
+            Time.timeScale = Time.timeScale > 0 ? 0 : 1;
             EscapeMenu.SetActive(!EscapeMenu.activeSelf);
         }
     }
 
     public void ResumeGame()
     {
+        Time.timeScale = 1;
         EscapeMenu.SetActive(false);
     }
 

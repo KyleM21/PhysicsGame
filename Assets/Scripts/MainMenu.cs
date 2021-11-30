@@ -13,12 +13,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject Title;
     public GameObject LevelSelectSubmenu;
     public GameObject SettingsSubmenu;
+    public GameObject CreditsSubmenu;
+    public AudioMixer MusicMixer;
+    public AudioMixer EffectsMixer;
 
     // Makes sure the menu is properly set each time its loaded.
     void Start()
@@ -31,6 +35,7 @@ public class MainMenu : MonoBehaviour
     {
         LevelSelectSubmenu.SetActive(false);
         SettingsSubmenu.SetActive(false);
+        CreditsSubmenu.SetActive(false);
         Title.SetActive(true);
         Time.timeScale = 1;
     }
@@ -61,6 +66,27 @@ public class MainMenu : MonoBehaviour
     {
         Title.SetActive(false);
         SettingsSubmenu.SetActive(true);
+    }
+
+    public void CreditsButton()
+    {
+        Title.SetActive(false);
+        CreditsSubmenu.SetActive(true);
+    }
+
+    public void SetMasterVolume(float value)
+    {
+        AudioListener.volume = value;
+    }
+
+    public void SetMusicVolume(float value)
+    {
+        MusicMixer.SetFloat("MusicMixerVolume", value);
+    }
+
+    public void SetEffectsVolume(float value)
+    {
+        MusicMixer.SetFloat("EffectsMixerVolume", value);
     }
 
     public void QuitToDesktop()
