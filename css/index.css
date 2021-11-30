@@ -80,8 +80,8 @@ footer {
 img {
   width: 100%;
   height: auto;
-  max-height: 450px;
-  max-width: 450px;
+  max-height: 200px;
+  max-width: 200px;
 }
 
 .dark,
