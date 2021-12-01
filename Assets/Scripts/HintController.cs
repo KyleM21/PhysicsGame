@@ -6,30 +6,38 @@ using UnityEngine;
 
 public class HintController : MonoBehaviour
 {
-    public GameObject HintHint; // Hint explaining hints
-    public GameObject PlayHint; // Hint about how to move and the goal
-    int HintState = 0;
+    public GameObject[] GameHints;
+    int HintIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        HintHint.SetActive(false);
-        PlayHint.SetActive(false);
+        foreach(GameObject go in GameHints)
+        {
+            go.SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (HintState == 1 && !HintHint.active)
+        if (Time.timeScale > 0)
         {
-            PlayHint.SetActive(true);
-            HintState++;
-        }
-        else if (HintState == 0 && Time.timeScale > 0)
-        {
-            HintHint.SetActive(true);
-            HintState++;
+            if (HintIndex == 0)
+            { // First
+                GameHints[0].SetActive(true);
+                HintIndex++;
+            }
+            else if (HintIndex < GameHints.Length)
+            {
+                // If the previous hint has been made inactive, make the next one active.
+                if (!GameHints[HintIndex - 1].activeSelf)
+                {
+                    GameHints[HintIndex - 1].SetActive(false);
+                    GameHints[HintIndex].SetActive(true);
+                    HintIndex++;
+                }
+            }
         }
     }
 }
