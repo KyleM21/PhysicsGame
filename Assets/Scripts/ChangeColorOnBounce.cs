@@ -34,18 +34,13 @@ public class ChangeColorOnBounce : MonoBehaviour
         {
             idx = Mathf.RoundToInt(Random.Range(0, 8));
             ren.material.SetColor("_Color", cols[idx]);
-            // Debug.Log(idx);
             absTime = 0;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // foreach (ContactPoint contact in collision.contacts)
-        // {
-        //     Debug.DrawRay(contact.point, contact.normal, Color.white);
-        // }
-        if (collision.relativeVelocity.magnitude > 5)
+        if (collision.relativeVelocity.magnitude > 5 && absTime > 0.4f)
         {
             idx = Mathf.RoundToInt(Random.Range(0, 8));
             ren.material.SetColor("_Color", cols[idx]);
