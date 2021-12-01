@@ -4473,7 +4473,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1840970398
 GameObject:
@@ -4615,13 +4615,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1275508461739605409, guid: 9c3f96b4188154f4bad07a9dc3cb5e51, type: 3}
+      propertyPath: Jet_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275508461739605409, guid: 9c3f96b4188154f4bad07a9dc3cb5e51, type: 3}
+      propertyPath: boost_force
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3854980282092017681, guid: 9c3f96b4188154f4bad07a9dc3cb5e51, type: 3}
       propertyPath: m_Name
       value: Sled
       objectReference: {fileID: 0}
     - target: {fileID: 8037835806337716795, guid: 9c3f96b4188154f4bad07a9dc3cb5e51, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8037835806337716795, guid: 9c3f96b4188154f4bad07a9dc3cb5e51, type: 3}
       propertyPath: m_LocalPosition.x

@@ -3106,6 +3106,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1275508461739605409, guid: 9c3f96b4188154f4bad07a9dc3cb5e51, type: 3}
+      propertyPath: lift_strength
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275508461739605409, guid: 9c3f96b4188154f4bad07a9dc3cb5e51, type: 3}
+      propertyPath: roll_strength
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275508461739605409, guid: 9c3f96b4188154f4bad07a9dc3cb5e51, type: 3}
+      propertyPath: Helicopter_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3854980282092017681, guid: 9c3f96b4188154f4bad07a9dc3cb5e51, type: 3}
       propertyPath: m_Name
       value: Sled
