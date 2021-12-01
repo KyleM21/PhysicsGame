@@ -495,7 +495,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8037835806337716795}
-  - component: {fileID: 1970712047501403791}
   - component: {fileID: 3196590436278423803}
   - component: {fileID: 1275508461739605409}
   - component: {fileID: 3773084853614923949}
@@ -522,19 +521,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1970712047501403791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3854980282092017681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37421df01a4b5814d98a7d628c3d3ca9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActivelyControlledObject: {fileID: 3854980282092017681}
 --- !u!50 &3196590436278423803
 Rigidbody2D:
   serializedVersion: 4
@@ -579,6 +565,7 @@ MonoBehaviour:
   lift_strength: 0.1
   roll_strength: 0.1
   starting_fuel: 100
+  fuel_drain: 0.05
 --- !u!61 &3773084853614923949
 BoxCollider2D:
   m_ObjectHideFlags: 0
