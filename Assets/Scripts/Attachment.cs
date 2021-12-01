@@ -118,7 +118,7 @@ public class Attachment : MonoBehaviour
                         {
                             impulse = (-roll_strength * Mathf.Deg2Rad) * impulse;
                         }
-                        ACORigidbody.AddTorque(impulse, ForceMode2D.Impulse);
+                        ACORigidbody.AddTorque(impulse* Time.deltaTime, ForceMode2D.Impulse);
                         current_fuel -= fuel_drain * 0.01f;
                     }
                 }
@@ -130,12 +130,12 @@ public class Attachment : MonoBehaviour
                 {
                     if (Jet_Enabled)
                     {
-                        ACORigidbody.AddForce(ACORigidbody.transform.right * boost_force, ForceMode2D.Force);
+                        ACORigidbody.AddForce(ACORigidbody.transform.right * boost_force * Time.deltaTime, ForceMode2D.Force);
                         current_fuel -= fuel_drain;
                     }
                     if (Helicopter_Enabled)
                     {
-                        ACORigidbody.AddForce(ACORigidbody.transform.up * lift_strength, ForceMode2D.Force);
+                        ACORigidbody.AddForce(ACORigidbody.transform.up * lift_strength * Time.deltaTime, ForceMode2D.Force);
                         current_fuel -= fuel_drain;
                     }
                 }
