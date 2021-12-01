@@ -10,7 +10,7 @@
  */
 
 // Enables debug prints.
-#define DEBUG_PRINTS
+// #define DEBUG_PRINTS
 
 using System.Collections;
 using System.Collections.Generic;
@@ -40,7 +40,7 @@ public class MovementController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Get the user input.
         float Horiz = Input.GetAxis("Horizontal") * HorizSensitivity;
