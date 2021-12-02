@@ -2,13 +2,13 @@
 	DOCTYPE css
 	File:  index.css
 	Name: Kyle Marcoux
-    GUI II
+    Repurposed for Software Engineering 1
     CSS based on template by W3Schools: https://www.w3schools.com/bootstrap/bootstrap_templates.asp
 */
 
 .navbar-default {
-background: rgb(75,16,16);
-background: linear-gradient(90deg, rgba(75,16,16,1) 0%, rgba(52,11,11,1) 35%, rgba(0,152,167,1) 100%);
+	background: rgb(93,21,21);
+	background: linear-gradient(90deg, rgba(93,21,21,1) 0%, rgba(70,15,15,1) 10%, rgba(52,11,11,1) 35%, rgba(22,91,100,1) 89%, rgba(0,152,167,1) 100%);
     border-color: #FFFFFF;
     border-radius: 0;
     margin-bottom: 0;
