@@ -29,7 +29,7 @@ public class MovementController : MonoBehaviour
     // NOTE: Making variables public will expose them in the editor. Changes made to the initialized value of a public
     //       variable will be ignored by Unity until it is made private, effectively forcing public variables to be changed
     //       in the editor only.
-    private float HorizSensitivity = 5f;
+    private float HorizSensitivity = 7f;
     private float VertiSensitivity = 5f;
 
     // Start is called before the first frame update

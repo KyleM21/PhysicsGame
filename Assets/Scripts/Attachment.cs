@@ -30,7 +30,7 @@ public class Attachment : MonoBehaviour
     [Space(10)]
     public bool Jet_Enabled = false;
     public GameObject Jet_Object;
-    [Range(0f, 10f)]
+    [Range(0f, 1000f)]
     public float boost_force = 5f;
 
     [Header("Helicopter")]
@@ -38,7 +38,7 @@ public class Attachment : MonoBehaviour
     public bool Helicopter_Enabled = false;
     public GameObject Helicopter_Object;
 
-    [Range(0f, 10f)]
+    [Range(0f, 50f)]
     public float lift_strength = 5f;
 
     [Range(0f, 10f)]
@@ -55,7 +55,7 @@ public class Attachment : MonoBehaviour
     [Range(0f, 1f)]
     public float fuel_drain = .05f;
 
-    private bool activated = false;
+    private bool boost_activated = false;
 
 
     // Start is called before the first frame update
@@ -81,11 +81,11 @@ public class Attachment : MonoBehaviour
         {
             if (Input.GetButtonDown("Boost"))
             {
-                activated = true;
+                boost_activated = true;
             }
             else if (Input.GetButtonUp("Boost"))
             {
-                activated = false;
+                boost_activated = false;
             }
             if (Helicopter_Enabled)
             {
@@ -124,7 +124,7 @@ public class Attachment : MonoBehaviour
                 }
             }
 
-            if (activated)
+            if (boost_activated)
             {
                 if (current_fuel > 0)
                 {

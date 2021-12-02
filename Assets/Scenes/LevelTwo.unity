@@ -4621,7 +4621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275508461739605409, guid: 9c3f96b4188154f4bad07a9dc3cb5e51, type: 3}
       propertyPath: boost_force
-      value: 5
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 3854980282092017681, guid: 9c3f96b4188154f4bad07a9dc3cb5e51, type: 3}
       propertyPath: m_Name
