@@ -22,7 +22,6 @@ public class FailDetect : MonoBehaviour
         if (Object.gameObject.tag == "Player")
         {
             RestartLevel();
-            Debug.Log("Goal Met");
         }
     }
 
