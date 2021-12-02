@@ -23,11 +23,26 @@ public class MainMenu : MonoBehaviour
     public GameObject CreditsSubmenu;
     public AudioMixer MusicMixer;
     public AudioMixer EffectsMixer;
+    
+    GameObject[] FunObjects;
 
     // Makes sure the menu is properly set each time its loaded.
     void Start()
     {
         ResetMenu();
+        FunObjects = GameObject.FindGameObjectsWithTag("Fun");
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Click");
+            foreach(GameObject fo in FunObjects)
+            {
+                fo.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-25f, 25f) * fo.GetComponent<Rigidbody2D>().mass, Random.Range(-25f, 25f) * fo.GetComponent<Rigidbody2D>().mass), ForceMode2D.Impulse);
+            }
+        }
     }
 
     // Unloads the Level Select and Settings submenu UIs, and loads the main title.
