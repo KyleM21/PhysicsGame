@@ -74,7 +74,7 @@ public class MainMenu : MonoBehaviour
 
     public void LoadLevelThree()
     {
-        SceneManager.LoadScene("LevelΤhree");
+        SceneManager.LoadScene("LevelTres");
     }
     
     public void SettingsButton()
