@@ -37,7 +37,7 @@ public class GoalHitDetect : MonoBehaviour
             }
             case "LevelTwo":
             {
-                SceneManager.LoadScene("LevelThree");
+                SceneManager.LoadScene("LevelTres");
                 break;
             }
             default:
